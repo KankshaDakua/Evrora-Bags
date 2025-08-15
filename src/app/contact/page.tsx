@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -55,8 +56,7 @@ const ContactPage = () => {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-muted-foreground">Our customer service team is available Monday to Friday, 9am to 5pm.</p>
-                                <a href="tel:+1234567890" className="text-primary font-medium hover:underline">+1 (234) 567-890</a>
+                                <a href="tel:+919321754868" className="text-primary font-medium hover:underline">+91 9321754868</a>
                             </CardContent>
                         </Card>
                     </motion.div>
