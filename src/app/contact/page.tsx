@@ -1,3 +1,4 @@
+'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,21 +7,34 @@ import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
     return (
         <div className="bg-background text-foreground">
             <Header />
             <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
-                <div className="text-center mb-16">
+                <motion.div
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
                     <h1 className="text-4xl sm:text-5xl font-bold font-serif text-primary">Contact Us</h1>
                     <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                         We'd love to hear from you. Whether you have a question, feedback, or just want to say hello, feel free to reach out.
                     </p>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-                    <div className="space-y-8">
+                    <motion.div
+                        className="space-y-8"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
                          <Card>
                             <CardHeader>
                                 <CardTitle className="font-serif flex items-center gap-3">
@@ -45,9 +59,14 @@ const ContactPage = () => {
                                 <a href="tel:+1234567890" className="text-primary font-medium hover:underline">+1 (234) 567-890</a>
                             </CardContent>
                         </Card>
-                    </div>
+                    </motion.div>
                    
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                    >
                          <Card>
                             <CardHeader>
                                 <CardTitle className="font-serif flex items-center gap-3">
@@ -70,9 +89,15 @@ const ContactPage = () => {
                                 </div>
                             </CardContent>
                         </Card>
-                    </div>
+                    </motion.div>
 
-                    <div className="lg:col-span-2">
+                    <motion.div
+                        className="lg:col-span-2"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                    >
                         <Card>
                            <CardHeader>
                                <CardTitle className="font-serif">Send a Message</CardTitle>
@@ -86,7 +111,7 @@ const ContactPage = () => {
                                </form>
                            </CardContent>
                        </Card>
-                    </div>
+                    </motion.div>
                 </div>
 
             </main>
