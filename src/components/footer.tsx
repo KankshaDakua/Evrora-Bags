@@ -9,19 +9,19 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="bg-secondary">
+    <footer id="contact" className="bg-secondary/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div className="mb-4 md:mb-0">
-            <Link href="/" className="text-xl font-bold text-primary">
+            <Link href="/" className="text-xl font-bold font-serif text-primary">
               AURA
             </Link>
             <p className="text-xs text-muted-foreground mt-1">&copy; {new Date().getFullYear()} AURA. All Rights Reserved.</p>
           </div>
-          <nav className="flex gap-x-6 mb-4 md:mb-0">
-            <Link href="#home" className="text-sm text-foreground hover:text-primary transition-colors">Home</Link>
-            <Link href="#products" className="text-sm text-foreground hover:text-primary transition-colors">Products</Link>
-            <Link href="#features" className="text-sm text-foreground hover:text-primary transition-colors">Features</Link>
+          <nav className="flex gap-x-6 mb-4 md:mb-0 text-sm">
+            <Link href="#home" className="text-foreground hover:text-primary/80 transition-colors">Home</Link>
+            <Link href="#products" className="text-foreground hover:text-primary/80 transition-colors">Collection</Link>
+            <Link href="#features" className="text-foreground hover:text-primary/80 transition-colors">About</Link>
           </nav>
           <div className="flex space-x-4">
             {socialLinks.map((link, index) => (

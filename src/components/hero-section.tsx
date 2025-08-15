@@ -1,102 +1,84 @@
 'use client';
 
-import React, { Suspense, useRef, useState } from 'react';
+import React, { Suspense, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import type * as THREE from 'three';
 
-// Placeholder 3D model component
-const HandbagModel = ({ color }: { color: string }) => {
-  const meshRef = useRef<THREE.Mesh>(null);
+// You can replace this with an actual GLB model of a handbag
+const HandbagModel = () => {
+  const meshRef = useRef<THREE.Group>(null);
   
-  // Rotate the model
-  useFrame((state, delta) => {
-    if(meshRef.current) {
-      meshRef.current.rotation.y += delta * 0.2;
+  // Slow rotation
+  useFrame((state) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.y = THREE.MathUtils.lerp(meshRef.current.rotation.y, state.pointer.x * 0.2, 0.05);
+      meshRef.current.rotation.x = THREE.MathUtils.lerp(meshRef.current.rotation.x, -state.pointer.y * 0.1, 0.05);
     }
   });
 
   return (
-    <mesh ref={meshRef} scale={2.5}>
-      <boxGeometry args={[1, 1, 0.2]} />
-      <meshStandardMaterial color={color} roughness={0.3} metalness={0.2} />
-    </mesh>
-  );
-};
-
-const ColorMoodSelector = ({ setColor }: { setColor: (color: string) => void }) => {
-  const colors = [
-    { name: 'Onyx', hex: '#1a1a1a' },
-    { name: 'Cream', hex: '#f2eee9' },
-    { name: 'Rose', hex: '#d9a6a0' },
-    { name: 'Sky', hex: '#a4c0d5' },
-  ];
-
-  return (
-    <motion.div 
-      className="absolute bottom-24 left-1/2 -translate-x-1/2 flex items-center gap-4 p-2 bg-white/50 backdrop-blur-sm rounded-full"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.8 }}
-    >
-      {colors.map((color) => (
-        <button
-          key={color.name}
-          onClick={() => setColor(color.hex)}
-          className="w-8 h-8 rounded-full border-2 border-white focus:outline-none focus:ring-2 focus:ring-primary"
-          style={{ backgroundColor: color.hex }}
-          aria-label={`Select ${color.name} color`}
-        />
-      ))}
-    </motion.div>
+    <group ref={meshRef}>
+        <mesh scale={2.5}>
+            <boxGeometry args={[1, 1, 0.2]} />
+            <meshStandardMaterial color="hsl(var(--foreground))" roughness={0.3} metalness={0.2} />
+        </mesh>
+    </group>
   );
 };
 
 const HeroSection = () => {
-  const [bagColor, setBagColor] = useState('#1a1a1a');
+  const targetRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['start start', 'end start'],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section id="home" className="relative h-screen w-full flex flex-col justify-center items-center bg-gradient-hero">
-      <div className="w-full h-full">
-        <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
+    <section ref={targetRef} id="home" className="relative h-screen w-full overflow-hidden">
+      <motion.div style={{ scale, opacity }} className="sticky top-0 h-full">
+        <div className="absolute inset-0 bg-gradient-hero" />
+        <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
           <ambientLight intensity={1.5} />
-          <directionalLight position={[5, 5, 5]} intensity={2} />
+          <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
           <Suspense fallback={null}>
-            <HandbagModel color={bagColor} />
+              <HandbagModel />
           </Suspense>
-          <OrbitControls enableZoom={false} enablePan={false} autoRotate={false} />
+          <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
         </Canvas>
-      </div>
+      </motion.div>
 
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center pointer-events-none">
         <motion.h1
-          className="text-6xl md:text-8xl font-bold text-primary"
+          className="text-6xl md:text-8xl font-bold font-serif text-primary"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
         >
-          Redefining Carry
+          AURA
         </motion.h1>
         <motion.p
           className="text-lg md:text-xl text-primary/80 mt-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
         >
-          Minimalism in motion.
+          Timeless by Design
         </motion.p>
       </div>
 
-      <ColorMoodSelector setColor={setBagColor} />
-
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
       >
-        <ChevronDown className="w-8 h-8 text-primary/50" />
+        <ChevronDown className="w-8 h-8 text-primary/50 animate-bounce" />
       </motion.div>
     </section>
   );
