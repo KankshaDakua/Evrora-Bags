@@ -5,7 +5,11 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
-const HeroSection = () => {
+interface HeroSectionProps {
+  onScrollDown: () => void;
+}
+
+const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -24,7 +28,7 @@ const HeroSection = () => {
         <Image
           src="https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clx20yv69000a08jr5y254jma.png"
           alt="Luxury Handbag"
-          layout="fill"
+          fill
           objectFit="cover"
           className="opacity-40"
           data-ai-hint="elegant handbag lifestyle"
@@ -55,10 +59,11 @@ const HeroSection = () => {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 pointer-events-none"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
+        onClick={onScrollDown}
       >
         <ChevronDown className="w-8 h-8 text-primary/50 animate-bounce" />
       </motion.div>
