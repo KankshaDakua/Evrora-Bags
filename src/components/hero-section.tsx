@@ -26,7 +26,7 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
       <motion.div style={{ scale, opacity }} className="sticky top-0 h-full w-full">
         <div className="absolute inset-0 bg-gradient-hero" />
         <Image
-          src="https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clx20yv69000a08jr5y254jma.png"
+          src="/hero-background.jpeg"
           alt="Luxury Handbag"
           fill
           objectFit="cover"
