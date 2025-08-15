@@ -6,14 +6,14 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const products = [
-  { name: "The Minimalist", image: "https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m7000408l41bepfka5.png", aiHint: "minimalist handbag" },
-  { name: "The Architect", image: "https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m7000508l47k7k7w46.png", aiHint: "architectural handbag" },
-  { name: "The Sculpt", image: "https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m7000608l4dsuo9bkk.png", aiHint: "sculptural handbag" },
-  { name: "The Classic", image: "https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m8000708l46g4s4648.png", aiHint: "classic handbag" },
-  { name: "The Voyager", image: "https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m8000808l48q248l0b.png", aiHint: "voyager handbag" },
-  { name: "The Muse", image: "https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m8000908l45j4j777c.png", aiHint: "muse handbag" },
-  { name: "The Artisan", image: "https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m8000a08l495c02b37.png", aiHint: "artisan handbag" },
-  { name: "The City", image: "https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m9000b08l43acp1a0k.png", aiHint: "city handbag" },
+  { name: "The Minimalist", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "minimalist handbag" },
+  { name: "The Architect", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "architectural handbag" },
+  { name: "The Sculpt", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "sculptural handbag" },
+  { name: "The Classic", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "classic handbag" },
+  { name: "The Voyager", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "voyager handbag" },
+  { name: "The Muse", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "muse handbag" },
+  { name: "The Artisan", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "artisan handbag" },
+  { name: "The City", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "city handbag" },
 ];
 
 const cardVariants = {

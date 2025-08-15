@@ -19,7 +19,7 @@ const AboutSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
                 <Image
-                    src="https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m6000308l4f1g1bn8g.png"
+                    src="https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg"
                     alt="Elegant handbag display"
                     width={800}
                     height={1000}
