@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,9 +19,25 @@ const ContactPage = () => {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-16 items-start">
-                    <div className="space-y-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+                    <div className="lg:col-span-2">
                         <Card>
+                           <CardHeader>
+                               <CardTitle className="font-serif">Send a Message</CardTitle>
+                           </CardHeader>
+                           <CardContent>
+                               <form className="space-y-4">
+                                   <Input type="text" placeholder="Your Name" />
+                                   <Input type="email" placeholder="Your Email" />
+                                   <Textarea placeholder="Your Message" rows={6} />
+                                   <Button type="submit" className="w-full">Send Message</Button>
+                               </form>
+                           </CardContent>
+                       </Card>
+                    </div>
+
+                    <div className="space-y-8">
+                         <Card>
                             <CardHeader>
                                 <CardTitle className="font-serif flex items-center gap-3">
                                     <Mail className="w-6 h-6 text-primary" />
@@ -44,6 +61,9 @@ const ContactPage = () => {
                                 <a href="tel:+1234567890" className="text-primary font-medium hover:underline">+1 (234) 567-890</a>
                             </CardContent>
                         </Card>
+                    </div>
+                   
+                    <div>
                          <Card>
                             <CardHeader>
                                 <CardTitle className="font-serif flex items-center gap-3">
@@ -64,21 +84,6 @@ const ContactPage = () => {
                                         title="AURA Flagship Store Location"
                                     ></iframe>
                                 </div>
-                            </CardContent>
-                        </Card>
-                    </div>
-                    <div>
-                         <Card>
-                            <CardHeader>
-                                <CardTitle className="font-serif">Send a Message</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <form className="space-y-4">
-                                    <Input type="text" placeholder="Your Name" />
-                                    <Input type="email" placeholder="Your Email" />
-                                    <Textarea placeholder="Your Message" rows={6} />
-                                    <Button type="submit" className="w-full">Send Message</Button>
-                                </form>
                             </CardContent>
                         </Card>
                     </div>
