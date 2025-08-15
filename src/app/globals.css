@@ -4,19 +4,19 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* #ffffff */
+    --background: 228 14% 98%; /* #faf9f7 */
     --foreground: 240 10% 3.9%; /* #1a1a1a */
-    --card: 0 0% 100%;
+    --card: 228 14% 98%;
     --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
+    --popover: 228 14% 98%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%; /* charcoal black for primary elements */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%; /* #f5f5f5 */
+    --primary: 240 10% 3.9%; /* charcoal black for primary elements */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 15% 90%; /* #e8e4df */
     --secondary-foreground: 240 5.9% 10%;
-    --muted: 30 15% 90%; /* #e6e1dc */
+    --muted: 30 15% 90%; /* #e8e4df */
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 0 0% 96.1%;
+    --accent: 30 15% 95%;
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -56,4 +56,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
 }
