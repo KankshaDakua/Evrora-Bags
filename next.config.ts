@@ -25,6 +25,8 @@ const nextConfig: NextConfig = {
       use: ['raw-loader', 'glslify-loader'],
     });
 
+    config.externals = [...config.externals, '@react-three/fiber', '@react-three/drei'];
+
     return config;
   }
 };
