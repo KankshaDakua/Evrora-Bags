@@ -1,0 +1,149 @@
+diff --git a/node_modules/@react-three/fiber/dist/index.js b/node_modules/@react-three/fiber/dist/index.js
+index 4dd48f1..f998399 100644
+--- a/node_modules/@react-three/fiber/dist/index.js
++++ b/node_modules/@react-three/fiber/dist/index.js
+@@ -10,7 +10,7 @@ var import_react = require("react");
+ var import_its_fine = require("its-fine");
+ var import_react_reconciler = require("react-reconciler");
+ 
+-// src/web/events.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/web/events.ts
+ var DOM_EVENTS = {
+   onClick: ["click", false],
+   onContextMenu: ["contextmenu", false],
+@@ -79,7 +79,7 @@ var createEvents = (store) => {
+   };
+ };
+ 
+-// src/core/renderer.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/renderer.ts
+ var import_react2 = require("react");
+ var import_react_reconciler2 = require("react-reconciler");
+ var import_its_fine2 = require("its-fine");
+@@ -250,7 +250,9 @@ var createRenderer = (catalogue) => {
+   applyProps.invalidate = invalidate;
+   applyProps.apply = true;
+   const reconciler = (0, import_react_reconciler2.default)(hostConfig);
+-  reconciler.injectIntoDevTools({
+-    bundleType: 1,
+-    version: "18.3.1",
+-    rendererPackageName: "@react-three/fiber"
+-  });
++  if (reconciler.injectIntoDevTools) {
++    reconciler.injectIntoDevTools({
++      bundleType: 1,
++      version: "18.3.1",
++      rendererPackageName: "@react-three/fiber"
++    });
++  }
+   const createThreeRoot = (canvas, state) => {
+     const root = reconciler.createContainer(state.events.connected, 1, null, false, null, "", console.error, null);
+     return {
+@@ -265,7 +267,7 @@ var createRenderer = (catalogue) => {
+   return createThreeRoot;
+ };
+ 
+-// src/core/store.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/store.ts
+ var import_zustand = require("zustand");
+ 
+ // ../../node_modules/.pnpm/zustand@4.5.2/node_modules/zustand/esm/vanilla.mjs
+@@ -358,7 +360,7 @@ var createStoreImpl = (createState) => {
+   return createStore;
+ };
+ 
+-// src/core/utils.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/utils.ts
+ var import_react3 = require("react");
+ var import_three = require("three");
+ var import_its_fine3 = require("its-fine");
+@@ -512,7 +514,7 @@ function buildGraph(object) {
+ }
+ var isMuted = (0, import_react3.createContext)(false);
+ 
+-// src/core/loop.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/loop.ts
+ function createLoop(roots) {
+   let running = false;
+   let frame;
+@@ -569,7 +571,7 @@ function createLoop(roots) {
+   };
+ }
+ 
+-// src/core/hooks.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/hooks.ts
+ var import_react4 = require("react");
+ var import_zustand3 = require("zustand");
+ var import_its_fine4 = require("its-fine");
+@@ -628,7 +630,7 @@ var useStore = () => {
+ };
+ var useFrame = (callback, renderPriority = 0) => {
+   const store = useStore();
+-  (0, import_react4.useEffect)(() => {
++  (0, import_react4.useLayoutEffect)(() => {
+     const unsubscribe = store.getState().internal.subscribe(callback, renderPriority, store);
+     return () => unsubscribe();
+   }, [renderPriority, callback, store]);
+@@ -668,7 +670,7 @@ function useGraph(object) {
+   return (0, import_react4.useMemo)(() => buildGraph(object), [object]);
+ }
+ 
+-// src/core/root.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/root.ts
+ var import_react5 = require("react");
+ var import_zustand4 = require("zustand");
+ var import_its_fine5 = require("its-fine");
+@@ -737,7 +739,7 @@ function createRoot(canvas) {
+   };
+ }
+ 
+-// src/native/events.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/native/events.ts
+ var NATIVE_EVENTS = {
+   onPointerDown: "onPointerDown",
+   onPointerUp: "onPointerUp",
+@@ -783,7 +785,7 @@ var createEvents2 = (store) => {
+   };
+ };
+ 
+-// src/core/catalogue.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/catalogue.ts
+ var import_three2 = require("three");
+ var catalogue = {};
+ Object.keys(import_three2).forEach((key) => {
+@@ -796,7 +798,7 @@ Object.keys(import_three2).forEach((key) => {
+   }
+ });
+ 
+-// src/core/instance.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/instance.ts
+ var import_three3 = require("three");
+ var _a;
+ var isObject3D = (obj) => obj && obj.isObject3D;
+@@ -957,11 +959,11 @@ var _Instance = class {
+ };
+ var Instance = _Instance;
+ 
+-// src/core/primitive.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/primitive.ts
+ var import_react6 = require("react");
+ var PRIMITIVE_TYPE = "primitive";
+ 
+-// src/core/component.ts
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/core/component.ts
+ var import_react7 = require("react");
+ function createReactComponent(type) {
+   return (0, import_react7.forwardRef)((props, ref) => {
+@@ -996,10 +998,10 @@ var three = new Proxy(
+   }
+ });
+ 
+-// src/web/Canvas.tsx
++// ../../node_modules/.pnpm/@react-three+fiber@8.16.8_react-dom@18.3.1_react@18.3.1_three@0.165.0/node_modules/@react-three/fiber/dist/declarations/src/web/Canvas.tsx
+ var import_react8 = require("react");
+ var import_its_fine6 = require("its-fine");
+-var import_react_dom = require("react-dom");
++var import_react_dom = __toESM(require("react-dom"));
+ var React = __toESM(require("react"));
+ var _Canvas = (0, import_react8.forwardRef)(({ children, ...props }, forwardedRef) => {
+   const {
