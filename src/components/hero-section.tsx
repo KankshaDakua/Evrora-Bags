@@ -26,7 +26,7 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
       <motion.div style={{ scale, opacity }} className="sticky top-0 h-full w-full">
         <div className="absolute inset-0 bg-gradient-hero" />
         <Image
-          src="/hero-background.jpeg"
+          src="/aura-hero.jpg"
           alt="Luxury Handbag"
           fill
           objectFit="cover"
