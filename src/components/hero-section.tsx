@@ -5,10 +5,11 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import type * as THREE from 'three';
 
 // Placeholder 3D model component
 const HandbagModel = ({ color }: { color: string }) => {
-  const meshRef = useRef<THREE.Mesh>(null!);
+  const meshRef = useRef<THREE.Mesh>(null);
   
   // Rotate the model
   useFrame((state, delta) => {
