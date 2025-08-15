@@ -9,18 +9,27 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div className="mb-4 md:mb-0">
-            <h3 className="font-headline text-2xl font-bold text-primary">LuminoBag</h3>
-            <p className="text-sm text-background/60">&copy; {new Date().getFullYear()} LuminoBag. All Rights Reserved.</p>
+            <Link href="/" className="text-2xl font-bold text-primary">
+              Lumino
+            </Link>
+            <p className="text-sm text-muted-foreground mt-1">&copy; {new Date().getFullYear()} Lumino. All Rights Reserved.</p>
           </div>
-          <div className="flex space-x-6">
+          <nav className="flex gap-x-6 mb-4 md:mb-0">
+            <Link href="#home" className="text-sm text-foreground hover:text-primary transition-colors">Home</Link>
+            <Link href="#new-arrivals" className="text-sm text-foreground hover:text-primary transition-colors">New Arrivals</Link>
+            <Link href="#collections" className="text-sm text-foreground hover:text-primary transition-colors">Collections</Link>
+            <Link href="#about" className="text-sm text-foreground hover:text-primary transition-colors">About</Link>
+            <Link href="#contact" className="text-sm text-foreground hover:text-primary transition-colors">Contact</Link>
+          </nav>
+          <div className="flex space-x-4">
             {socialLinks.map((link, index) => (
               <Link key={index} href={link.href} target="_blank" rel="noopener noreferrer" 
-                className="text-background/80 hover:text-primary hover:scale-125 transition-all duration-300 transform-gpu">
-                <link.icon className="w-6 h-6" />
+                className="text-muted-foreground hover:text-primary transition-colors">
+                <link.icon className="w-5 h-5" />
               </Link>
             ))}
           </div>
