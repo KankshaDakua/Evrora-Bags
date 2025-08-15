@@ -20,22 +20,6 @@ const ContactPage = () => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-                    <div className="lg:col-span-2">
-                        <Card>
-                           <CardHeader>
-                               <CardTitle className="font-serif">Send a Message</CardTitle>
-                           </CardHeader>
-                           <CardContent>
-                               <form className="space-y-4">
-                                   <Input type="text" placeholder="Your Name" />
-                                   <Input type="email" placeholder="Your Email" />
-                                   <Textarea placeholder="Your Message" rows={6} />
-                                   <Button type="submit" className="w-full">Send Message</Button>
-                               </form>
-                           </CardContent>
-                       </Card>
-                    </div>
-
                     <div className="space-y-8">
                          <Card>
                             <CardHeader>
@@ -86,6 +70,22 @@ const ContactPage = () => {
                                 </div>
                             </CardContent>
                         </Card>
+                    </div>
+
+                    <div className="lg:col-span-2">
+                        <Card>
+                           <CardHeader>
+                               <CardTitle className="font-serif">Send a Message</CardTitle>
+                           </CardHeader>
+                           <CardContent>
+                               <form className="space-y-4">
+                                   <Input type="text" placeholder="Your Name" />
+                                   <Input type="email" placeholder="Your Email" />
+                                   <Textarea placeholder="Your Message" rows={6} />
+                                   <Button type="submit" className="w-full">Send Message</Button>
+                               </form>
+                           </CardContent>
+                       </Card>
                     </div>
                 </div>
 
