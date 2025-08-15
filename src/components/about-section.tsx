@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from "next/image";
@@ -18,7 +19,7 @@ const AboutSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
                 <Image
-                    src="https://placehold.co/800x1000.png"
+                    src="https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m6000308l4f1g1bn8g.png"
                     alt="Elegant handbag display"
                     width={800}
                     height={1000}

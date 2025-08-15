@@ -1,3 +1,4 @@
+
 'use client';
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -35,7 +36,7 @@ const AboutPage = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                          <Image
-                            src="https://placehold.co/800x1000.png"
+                            src="https://storage.googleapis.com/maker-studio-project-files-prod/userID-clv6o2f1u001l08l10b503i1g/clxkvf1m6000208l414k032j1.png"
                             alt="Craftsman working on a handbag"
                             width={800}
                             height={1000}
