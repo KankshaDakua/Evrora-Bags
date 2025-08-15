@@ -9,6 +9,10 @@ const products = [
   { name: "The Architect", image: "https://placehold.co/800x1000.png", aiHint: "architectural handbag" },
   { name: "The Sculpt", image: "https://placehold.co/800x1000.png", aiHint: "sculptural handbag" },
   { name: "The Classic", image: "https://placehold.co/800x1000.png", aiHint: "classic handbag" },
+  { name: "The Voyager", image: "https://placehold.co/800x1000.png", aiHint: "voyager handbag" },
+  { name: "The Muse", image: "https://placehold.co/800x1000.png", aiHint: "muse handbag" },
+  { name: "The Artisan", image: "https://placehold.co/800x1000.png", aiHint: "artisan handbag" },
+  { name: "The City", image: "https://placehold.co/800x1000.png", aiHint: "city handbag" },
 ];
 
 const cardVariants = {
@@ -26,17 +30,8 @@ const cardVariants = {
 
 const ProductShowcase = () => {
   return (
-    <section id="products" className="py-24 bg-background">
+    <section id="products" className="bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
-          className="text-4xl font-bold font-serif text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8 }}
-        >
-          Our Collection
-        </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product, index) => (
             <motion.div

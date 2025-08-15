@@ -28,10 +28,10 @@ const Header = () => {
           AURA
         </Link>
         <nav className="hidden md:flex gap-x-8 text-sm font-medium">
-           <Link href="#home" className="text-foreground hover:text-primary/80 transition-opacity">Home</Link>
-           <Link href="#products" className="text-foreground hover:text-primary/80 transition-opacity">Collection</Link>
-           <Link href="#features" className="text-foreground hover:text-primary/80 transition-opacity">About</Link>
-           <Link href="#contact" className="text-foreground hover:text-primary/80 transition-opacity">Contact</Link>
+           <Link href="/" className="text-foreground hover:text-primary/80 transition-opacity">Home</Link>
+           <Link href="/collection" className="text-foreground hover:text-primary/80 transition-opacity">Collection</Link>
+           <Link href="/about" className="text-foreground hover:text-primary/80 transition-opacity">About</Link>
+           <Link href="/contact" className="text-foreground hover:text-primary/80 transition-opacity">Contact</Link>
         </nav>
         <div className="md:hidden">
           {/* Mobile menu button can be added here */}

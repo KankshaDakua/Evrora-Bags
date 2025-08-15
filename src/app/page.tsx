@@ -1,10 +1,11 @@
 'use client';
 
 import Header from '@/components/header';
-import ProductShowcase from '@/components/product-showcase';
 import FeatureBadges from '@/components/feature-badges';
 import Footer from '@/components/footer';
 import dynamic from 'next/dynamic';
+import AboutSection from '@/components/about-section';
+import CollectionCTA from '@/components/collection-cta';
 
 const HeroSection = dynamic(() => import('@/components/hero-section'), { ssr: false });
 
@@ -15,7 +16,8 @@ export default function Home() {
       <main>
         <HeroSection />
         <FeatureBadges />
-        <ProductShowcase />
+        <AboutSection />
+        <CollectionCTA />
       </main>
       <Footer />
     </div>
