@@ -112,6 +112,12 @@ const nextConfig: NextConfig = {
         hostname: "www.bellaonlinestore.com",
         port: "",
         pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "sc04.alicdn.com",
+        port: "",
+        pathname: "/**",
       }
     ],
   },
