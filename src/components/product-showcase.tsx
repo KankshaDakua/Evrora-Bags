@@ -13,7 +13,7 @@ const products = [
   { name: "Michael Kors", image: "https://images-cdn.ubuy.co.in/6545b97853378764dd0696c6-michael-kors-bag-handbag-jet-set-travel.jpg", aiHint: "michael kors handbag" },
   { name: "Coach Bag", image: "https://www.bellaonlinestore.com/cdn/shop/files/FullSizeRender_04999b9d-da32-4491-ab1e-e42268216272.jpg?v=1739602493&width=1445", aiHint: "coach handbag" },
   { name: "Fendi", image: "https://cdn.theluxurycloset.com/uploads/opt/products/750x750/luxury-women-fendi-used-handbags-p1066518-006.jpeg", aiHint: "fendi handbag" },
-  { name: "Michael Kors", image: "https://sc04.alicdn.com/kf/Hc460dd0793be4ebab6fc1b18798cc8c2X.jpg", aiHint: "tote bag" },
+  { name: "Michael Kors", image: "https://michaelkors.scene7.com/is/image/MichaelKors/35F0GTVT9L-0001_1?$large$", aiHint: "tote bag" },
 ];
 
 const cardVariants = {

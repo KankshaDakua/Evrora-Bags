@@ -124,6 +124,12 @@ const nextConfig: NextConfig = {
         hostname: "images-cdn.ubuy.co.in",
         port: "",
         pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "michaelkors.scene7.com",
+        port: "",
+        pathname: "/**",
       }
     ],
   },
