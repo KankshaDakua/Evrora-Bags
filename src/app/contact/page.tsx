@@ -89,15 +89,15 @@ const ContactPage = () => {
                             </CardHeader>
                             <CardContent className="!p-0">
                                 <div className="aspect-video w-full rounded-b-lg overflow-hidden">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.852395132296!2d72.90226407425307!3d19.06941505224374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c625c032431d%3A0x269a8a3a297f6262!2sK%20Star%20Mall!5e0!3m2!1sen!2sin!4v1722361439345!5m2!1sen!2sin"
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
+                                    <iframe 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471.3562621744883!2d72.90483884813589!3d19.069476100570204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c625c032431d%3A0x269a8a3a297f6262!2sK%20Star%20Mall!5e0!3m2!1sen!2sin!4v1722421332715!5m2!1sen!2sin" 
+                                        width="100%" 
+                                        height="100%" 
+                                        style={{border:0}} 
                                         allowFullScreen={true}
-                                        loading="lazy"
+                                        loading="lazy" 
                                         referrerPolicy="no-referrer-when-downgrade"
-                                        title="AURA Flagship Store Location"
+                                        title="AURA Store Street View"
                                     ></iframe>
                                 </div>
                             </CardContent>
