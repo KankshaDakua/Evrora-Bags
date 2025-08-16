@@ -118,6 +118,12 @@ const nextConfig: NextConfig = {
         hostname: "sc04.alicdn.com",
         port: "",
         pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images-cdn.ubuy.co.in",
+        port: "",
+        pathname: "/**",
       }
     ],
   },
