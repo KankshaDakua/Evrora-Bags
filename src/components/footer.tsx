@@ -25,7 +25,7 @@ const Footer = () => {
     { icon: Instagram, href: '#' },
     { icon: Facebook, href: '#' },
     { icon: Twitter, href: '#' },
-    { icon: Mail, href: 'mailto:hello@aura.com' },
+    { icon: Mail, href: 'mailto:Sahilkhan9321754868@email.com' },
   ];
 
   return (
