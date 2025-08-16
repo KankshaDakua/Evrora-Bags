@@ -77,7 +77,7 @@ const ContactPage = () => {
                             <CardContent className="!p-0">
                                 <div className="aspect-video w-full rounded-b-lg overflow-hidden">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991625692698!2d2.292292615674208!3d48.85837007928751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sfr!4v1622549990145!5m2!1sen!2sfr"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.852395132296!2d72.90226407425307!3d19.06941505224374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c625c032431d%3A0x269a8a3a297f6262!2sK%20Star%20Mall!5e0!3m2!1sen!2sin!4v1722361439345!5m2!1sen!2sin"
                                         width="100%"
                                         height="100%"
                                         style={{ border: 0 }}
