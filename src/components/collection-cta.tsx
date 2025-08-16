@@ -17,7 +17,7 @@ const CollectionCTA = () => {
         >
             <h2 className="text-3xl sm:text-4xl font-bold font-serif text-primary mb-6">Explore the Collection</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-                From minimalist totes to sculptural clutches, discover the perfect Randi Sahil Bags bag to complement your unique style. Each piece is designed with intention and crafted to perfection.
+                From minimalist totes to sculptural clutches, discover the perfect Evrora Bag to complement your unique style. Each piece is designed with intention and crafted to perfection.
             </p>
             <Button asChild size="lg">
                 <Link href="/collection">View All Products</Link>

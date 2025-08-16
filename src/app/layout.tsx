@@ -4,7 +4,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Randi Sahil Bags',
+  title: 'Evrora Bags',
   description: 'Handcrafted Bags for Modern Living',
 };
 
