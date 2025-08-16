@@ -59,6 +59,19 @@ const ContactPage = () => {
                                 <a href="tel:+919321754868" className="text-primary font-medium hover:underline">+91 9321754868</a>
                             </CardContent>
                         </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="font-serif flex items-center gap-3">
+                                    <MapPin className="w-6 h-6 text-primary" />
+                                    Address
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-muted-foreground">
+                                    Shop no.18, Merchant Center, Plot no.14-D, APMC Masala Market, APMC Market, Sector 19, Vashi, Navi Mumbai, Maharashtra 400705
+                                </p>
+                            </CardContent>
+                        </Card>
                     </motion.div>
                    
                     <motion.div
@@ -71,7 +84,7 @@ const ContactPage = () => {
                             <CardHeader>
                                 <CardTitle className="font-serif flex items-center gap-3">
                                     <MapPin className="w-6 h-6 text-primary" />
-                                    Our Flagship Store
+                                    Our Store
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="!p-0">
