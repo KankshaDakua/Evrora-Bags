@@ -89,6 +89,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.shopyantra.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
