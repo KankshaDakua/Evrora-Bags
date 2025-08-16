@@ -38,8 +38,8 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
             <Image
               src="https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg"
               alt="Luxury Handbag"
-              width={400}
-              height={500}
+              width={300}
+              height={375}
               objectFit="cover"
               className="rounded-lg shadow-2xl"
               data-ai-hint="elegant handbag lifestyle"
