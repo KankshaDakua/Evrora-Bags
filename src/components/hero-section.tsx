@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
@@ -10,56 +10,46 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
-  const targetRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ['start start', 'end start'],
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 1.2]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0]);
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
-
-
   return (
-    <section ref={targetRef} id="home" className="relative h-screen w-full overflow-hidden">
-      <motion.div style={{ scale, opacity }} className="sticky top-0 h-full w-full">
-        <div className="absolute inset-0 bg-gradient-hero" />
-        <Image
-          src="https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg"
-          alt="Luxury Handbag"
-          fill
-          objectFit="cover"
-          className="opacity-40"
-          data-ai-hint="elegant handbag lifestyle"
-          priority
-        />
-      </motion.div>
+    <section id="home" className="relative h-screen w-full flex items-center justify-center bg-gradient-hero overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <motion.div 
+            className="text-center md:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+          >
+            <h1 className="text-6xl md:text-8xl font-bold font-serif text-primary">
+              AURA
+            </h1>
+            <p className="text-lg md:text-xl text-primary/80 mt-4">
+              Timeless by Design
+            </p>
+          </motion.div>
 
-      <motion.div 
-        style={{ opacity: contentOpacity }}
-        className="absolute inset-0 flex flex-col justify-center items-center text-center pointer-events-none"
-      >
-        <motion.h1
-          className="text-6xl md:text-8xl font-bold font-serif text-primary"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeOut' }}
-        >
-          AURA
-        </motion.h1>
-        <motion.p
-          className="text-lg md:text-xl text-primary/80 mt-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
-        >
-          Timeless by Design
-        </motion.p>
-      </motion.div>
+          <motion.div 
+            className="flex justify-center"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
+          >
+            <Image
+              src="https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg"
+              alt="Luxury Handbag"
+              width={500}
+              height={600}
+              objectFit="cover"
+              className="rounded-lg shadow-2xl"
+              data-ai-hint="elegant handbag lifestyle"
+              priority
+            />
+          </motion.div>
+        </div>
+      </div>
 
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer pointer-events-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
