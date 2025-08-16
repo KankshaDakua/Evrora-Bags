@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const products = [
-  { name: "Farfetch", image: "https://www.shopyantra.com/cdn/shop/files/ECBBD09B-530E-4227-848B-12FFBF5DA249.jpg?v=1713736607", aiHint: "designer handbag" },
+  { name: "Farfetch", image: "https://images.prom.ua/6115105615_w600_h600_6115105615.jpg", aiHint: "designer handbag" },
   { name: "Chanel", image: "https://www.chanel.com/images///f_auto//-9543169867806.jpg", aiHint: "chanel handbag" },
   { name: "BigCommerce Bag", image: "https://cdn11.bigcommerce.com/s-mqq1i1xa2c/images/stencil/1280x1280/products/171716/5557605/972378_BEIG_1__41135.1702452771.jpg?c=1", aiHint: "beige handbag" },
   { name: "Louis Vuitton", image: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_M/louis-vuitton--M45495_PM2_Front%20view.jpg?wid=750&hei=870", aiHint: "louis vuitton handbag" },

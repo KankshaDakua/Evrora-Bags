@@ -95,6 +95,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: "https",
+        hostname: "images.prom.ua",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
