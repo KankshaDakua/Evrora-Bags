@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -37,8 +38,8 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
             <Image
               src="https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg"
               alt="Luxury Handbag"
-              width={500}
-              height={600}
+              width={400}
+              height={500}
               objectFit="cover"
               className="rounded-lg shadow-2xl"
               data-ai-hint="elegant handbag lifestyle"
