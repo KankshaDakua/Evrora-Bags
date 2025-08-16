@@ -30,7 +30,7 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
           </motion.div>
 
           <motion.div 
-            className="flex justify-center"
+            className="flex justify-center bg-accent p-4 rounded-lg shadow-2xl"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
@@ -41,7 +41,7 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
               width={300}
               height={375}
               objectFit="cover"
-              className="rounded-lg shadow-2xl"
+              className="rounded-lg"
               data-ai-hint="elegant handbag lifestyle"
               priority
             />
