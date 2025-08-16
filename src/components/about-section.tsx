@@ -19,12 +19,12 @@ const AboutSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
                 <Image
-                    src="https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg"
+                    src="https://d2j6dbq0eux0bg.cloudfront.net/images/10077158/4679621165.jpg"
                     alt="Elegant handbag display"
                     width={800}
                     height={1000}
                     className="w-full h-full object-cover"
-                    data-ai-hint="elegant handbag display"
+                    data-ai-hint="handbag on display"
                 />
             </motion.div>
             <motion.div
