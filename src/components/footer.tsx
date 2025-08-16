@@ -34,9 +34,9 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div className="mb-4 md:mb-0">
             <Link href="/" className="text-xl font-bold font-serif text-primary">
-              AURA
+              WholeSale Wala
             </Link>
-            <p className="text-xs text-muted-foreground mt-1">&copy; {new Date().getFullYear()} AURA. All Rights Reserved.</p>
+            <p className="text-xs text-muted-foreground mt-1">&copy; {new Date().getFullYear()} WholeSale Wala. All Rights Reserved.</p>
           </div>
           <nav className="flex gap-x-6 mb-4 md:mb-0 text-sm">
             <Link href="/" className="text-foreground hover:text-primary/80 transition-colors">Home</Link>

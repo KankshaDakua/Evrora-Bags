@@ -22,7 +22,7 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
             transition={{ duration: 1, ease: 'easeOut' }}
           >
             <h1 className="text-6xl md:text-8xl font-bold font-serif text-primary">
-              AURA
+              WholeSale Wala
             </h1>
             <p className="text-lg md:text-xl text-primary/80 mt-4">
               Timeless by Design

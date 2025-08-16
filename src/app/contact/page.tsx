@@ -97,7 +97,7 @@ const ContactPage = () => {
                                         allowFullScreen={true}
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
-                                        title="AURA Store Street View"
+                                        title="WholeSale Wala Store Street View"
                                     ></iframe>
                                 </div>
                             </CardContent>
