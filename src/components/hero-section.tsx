@@ -36,7 +36,7 @@ const HeroSection = ({ onScrollDown }: HeroSectionProps) => {
             transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
           >
             <Image
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvguRkjD_nVl1PlgM8g1WfwOldpQsB88s-x5o2ztHJVH9dqoN9"
+              src="https://www.vhv.rs/dpng/d/548-5488214_lv-purse-png-banner-royalty-free-price-louis.png"
               alt="Luxury Handbag"
               width={300}
               height={375}
