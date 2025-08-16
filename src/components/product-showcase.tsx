@@ -6,14 +6,14 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const products = [
-  { name: "The Minimalist", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "minimalist handbag" },
-  { name: "The Architect", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "architectural handbag" },
-  { name: "The Sculpt", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "sculptural handbag" },
-  { name: "The Classic", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "classic handbag" },
-  { name: "The Voyager", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "voyager handbag" },
-  { name: "The Muse", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "muse handbag" },
-  { name: "The Artisan", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "artisan handbag" },
-  { name: "The City", image: "https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg", aiHint: "city handbag" },
+  { name: "Farfetch", image: "https://cdn-images.farfetch-contents.com/15/58/80/90/15588090_28246821_1000.jpg", aiHint: "designer handbag" },
+  { name: "Chanel", image: "https://www.chanel.com/images///f_auto//-9543169867806.jpg", aiHint: "chanel handbag" },
+  { name: "BigCommerce Bag", image: "https://cdn11.bigcommerce.com/s-mqq1i1xa2c/images/stencil/1280x1280/products/171716/5557605/972378_BEIG_1__41135.1702452771.jpg?c=1", aiHint: "beige handbag" },
+  { name: "Louis Vuitton", image: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_M/louis-vuitton--M45495_PM2_Front%20view.jpg?wid=750&hei=870", aiHint: "louis vuitton handbag" },
+  { name: "Louis Vuitton", image: "https://in.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-gm--M45320_PM1_Side%20view.jpg", aiHint: "louis vuitton tote" },
+  { name: "Farfetch", image: "https://cdn-images.farfetch-contents.com/27/65/83/14/27658314_57434018_1000.jpg", aiHint: "designer handbag" },
+  { name: "Fendi", image: "https://cdn.theluxurycloset.com/uploads/opt/products/750x750/luxury-women-fendi-used-handbags-p1066518-006.jpeg", aiHint: "fendi handbag" },
+  { name: "Gucci", image: "https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1697733137/764960_K9GSG_8367_001_057_0000_Light-ophidia-mini-bag.jpg", aiHint: "gucci handbag" },
 ];
 
 const cardVariants = {
