@@ -36,7 +36,7 @@ const AboutPage = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                     >
                          <Image
-                            src="https://pictures-nigeria.jijistatic.com/66970318_NzU2LTEwMDgtMGUyYTExMTc3Mw.jpg"
+                            src="https://m.media-amazon.com/images/I/81mQJD+mEPL._UY1000_.jpg"
                             alt="Craftsman working on a handbag"
                             width={800}
                             height={1000}
