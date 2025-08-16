@@ -25,7 +25,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
         <Link href="/" className="text-2xl font-bold font-serif text-primary">
-          Evrora Bags
+          Randi Sahil Bags
         </Link>
         <nav className="hidden md:flex gap-x-8 text-sm font-medium">
            <Link href="/" className="text-foreground hover:text-primary/80 transition-opacity">Home</Link>

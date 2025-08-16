@@ -21,7 +21,7 @@ const AboutPage = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <h1 className="text-4xl sm:text-5xl font-bold font-serif text-primary">About Evrora Bags</h1>
+                    <h1 className="text-4xl sm:text-5xl font-bold font-serif text-primary">About Randi Sahil Bags</h1>
                     <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
                         We believe that a handbag is more than just an accessory—it's a companion that carries your story.
                     </p>
@@ -53,7 +53,7 @@ const AboutPage = () => {
                     >
                         <h2 className="text-3xl font-bold font-serif text-primary">Our Philosophy</h2>
                         <p className="text-muted-foreground">
-                            Evrora Bags was born from a passion for timeless design and impeccable craftsmanship. We set out to create handbags that are not only beautiful but also functional and enduring. Each piece in our collection is a testament to our commitment to quality, sustainability, and the art of modern elegance.
+                            Randi Sahil Bags was born from a passion for timeless design and impeccable craftsmanship. We set out to create handbags that are not only beautiful but also functional and enduring. Each piece in our collection is a testament to our commitment to quality, sustainability, and the art of modern elegance.
                         </p>
                         <p className="text-muted-foreground">
                             We source the finest eco-friendly leathers and materials, and our artisans pour their heart and soul into every stitch. Our designs are inspired by the confident, modern individual who values both style and substance.

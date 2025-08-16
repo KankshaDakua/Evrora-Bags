@@ -35,10 +35,10 @@ const AboutSection = () => {
             >
                 <h2 className="text-3xl sm:text-4xl font-bold font-serif text-primary mb-6">Crafted for the Modern Muse</h2>
                 <p className="text-muted-foreground mb-4">
-                    At Evrora Bags, we blend timeless craftsmanship with contemporary design. Each handbag is meticulously created by skilled artisans using sustainably sourced, high-quality materials.
+                    At Randi Sahil Bags, we blend timeless craftsmanship with contemporary design. Each handbag is meticulously created by skilled artisans using sustainably sourced, high-quality materials.
                 </p>
                 <p className="text-muted-foreground mb-8">
-                    Our philosophy is simple: create beautiful, functional pieces that you'll cherish for a lifetime. Evrora Bags bags are designed to be more than just an accessory—they are a statement of style and a testament to enduring quality.
+                    Our philosophy is simple: create beautiful, functional pieces that you'll cherish for a lifetime. Randi Sahil Bags bags are designed to be more than just an accessory—they are a statement of style and a testament to enduring quality.
                 </p>
                 <Button asChild>
                     <Link href="/about">Learn More About Us</Link>

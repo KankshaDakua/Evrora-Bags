@@ -97,7 +97,7 @@ const ContactPage = () => {
                                         allowFullScreen={true}
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
-                                        title="Evrora Bags Store Street View"
+                                        title="Randi Sahil Bags Store Street View"
                                     ></iframe>
                                 </div>
                             </CardContent>
