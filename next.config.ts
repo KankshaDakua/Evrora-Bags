@@ -106,6 +106,12 @@ const nextConfig: NextConfig = {
         hostname: "puzzlesegypt.com",
         port: "",
         pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.bellaonlinestore.com",
+        port: "",
+        pathname: "/**",
       }
     ],
   },
