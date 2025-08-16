@@ -43,20 +43,23 @@ const ProductShowcase = () => {
               viewport={{ once: true, amount: 0.3 }}
               variants={cardVariants}
             >
-              <div className="group relative overflow-hidden rounded-lg shadow-sm">
-                <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.4, ease: 'easeOut' }}>
+              <div className="group overflow-hidden rounded-lg shadow-sm border border-border">
+                <motion.div 
+                  className="overflow-hidden"
+                  whileHover={{ scale: 1.05 }} 
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                >
                   <Image
                     src={product.image}
                     alt={product.name}
                     width={800}
                     height={1000}
-                    className="h-full w-full object-cover"
+                    className="w-full object-cover aspect-[4/5]"
                     data-ai-hint={product.aiHint}
                   />
                 </motion.div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-xl font-semibold text-accent opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-400">
+                <div className="p-4 bg-card">
+                  <h3 className="text-lg font-semibold text-card-foreground text-center truncate">
                     {product.name}
                   </h3>
                 </div>
