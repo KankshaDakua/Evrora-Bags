@@ -19,7 +19,7 @@ const AboutSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
                 <Image
-                    src="https://d2j6dbq0eux0bg.cloudfront.net/images/10077158/4679621165.jpg"
+                    src="https://cdn11.bigcommerce.com/s-eie9lsi1uc/images/stencil/1280x1280/products/75025/810623/524537_K05NB_8745_001_078_0000_Light-Ophidia-GG-medium-tote-bag__12345.1697887767.jpg?c=1"
                     alt="Elegant handbag display"
                     width={800}
                     height={1000}
