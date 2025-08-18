@@ -88,7 +88,7 @@ const ContactPage = () => {
                             </CardHeader>
                             <CardContent>
                                 <p className="text-muted-foreground">
-                                    Shop no.18, Merchant Center, Plot no.14-D, APMC Masala Market, APMC Market, Sector 19, Vashi, Navi Mumbai, Maharashtra 400705
+                                Shop no.18, Merchant Center, Plot no.14-D, APMC Wholesale & Retail, APMC Market, Sector 19, Vashi, Navi Mumbai, Maharashtra 400705
                                 </p>
                             </CardContent>
                         </Card>
