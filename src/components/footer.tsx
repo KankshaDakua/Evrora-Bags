@@ -22,11 +22,11 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const Footer = () => {
   const socialLinks = [
-    { icon: WhatsAppIcon, href: '#' },
-    { icon: Instagram, href: '#' },
-    { icon: Facebook, href: '#' },
+    { icon: WhatsAppIcon, href: 'https://wa.me/919321754868' },
+    { icon: Instagram, href: 'https://www.instagram.com/pvtsahxil.____?igsh=MWV2YXNxbDY3YWUzMw==' },
+    { icon: Facebook, href: 'https://www.facebook.com/share/19w4sBk4FA/' },
     { icon: Twitter, href: '#' },
-    { icon: Mail, href: 'mailto:Sahilkhan9321754868@gmail.com' },
+    { icon: Mail, href: 'mailto:sahilkhan9321754868@gmail.com' },
   ];
 
   return (
