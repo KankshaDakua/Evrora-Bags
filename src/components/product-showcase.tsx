@@ -121,15 +121,17 @@ const ProductShowcase = () => {
             </button>
 
             <motion.div
-              layoutId={`product-${selectedImage}`}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              onClick={(e) => e.stopPropagation()} // Prevents closing modal when clicking on the image
               className="relative w-11/12 h-5/6 md:w-auto md:h-5/6"
             >
               <Image
                 src={products[selectedImage].image}
                 alt={products[selectedImage].name}
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
+                fill
+                className="object-contain rounded-lg"
               />
             </motion.div>
           </motion.div>
