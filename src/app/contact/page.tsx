@@ -64,7 +64,7 @@ const ContactPage = () => {
                             </CardHeader>
                             <CardContent>
                                 <p className="text-muted-foreground">For general inquiries, support, or feedback, please email us at:</p>
-                                <a href="mailto:Sahilkhan9321754868@gmail.com" className="text-primary font-medium hover:underline">Sahilkhan9321754868@gmail.com</a>
+                                <a href="mailto:sahilkhan9321754868@gmail.com" className="text-primary font-medium hover:underline">sahilkhan9321754868@gmail.com</a>
                             </CardContent>
                         </Card>
                          <Card>
