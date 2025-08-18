@@ -10,6 +10,25 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { motion } from "framer-motion";
 
+
+const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+      <path d="M16.5 12.5c-.3-.2-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.2-.2.2-.5.7-.6.8-.1.1-.2.2-.4.1-.2 0-.9-.3-1.7-1-.6-.6-1-1.3-1.2-1.5-.1-.2 0-.3.1-.4l.2-.2c.1 0 .2-.1.3-.2.1-.1.1-.2.2-.3.1-.1 0-.2 0-.3s-.6-1.4-.8-1.9c-.2-.5-.4-.4-.5-.4h-.4c-.1 0-.3.1-.5.3-.2.2-.7.7-.7 1.6s.7 1.9.8 2c.1.1 1.4 2.1 3.5 2.9.5.2.9.3 1.2.4.5.1.9.1 1.2-.1.4-.2 1.2-.5 1.4-1 .2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z" />
+    </svg>
+  );
+
 const ContactPage = () => {
     return (
         <div className="bg-background text-foreground">
@@ -51,12 +70,13 @@ const ContactPage = () => {
                          <Card>
                             <CardHeader>
                                 <CardTitle className="font-serif flex items-center gap-3">
-                                    <Phone className="w-6 h-6 text-primary" />
-                                    Call Us
+                                    <WhatsAppIcon className="w-6 h-6 text-primary" />
+                                    Chat on WhatsApp
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <a href="tel:+919321754868" className="text-primary font-medium hover:underline">+91 9321754868</a>
+                                <p className="text-muted-foreground">Click the number below to start a chat with us instantly.</p>
+                                <a href="https://wa.me/919321754868" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">+91 9321754868</a>
                             </CardContent>
                         </Card>
                         <Card>
