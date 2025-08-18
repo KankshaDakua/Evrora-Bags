@@ -1,9 +1,10 @@
 
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const products = [
   { name: "Christian Dior", image: "https://images.prom.ua/6115105615_w600_h600_6115105615.jpg", aiHint: "designer handbag" },
@@ -30,6 +31,25 @@ const cardVariants = {
 };
 
 const ProductShowcase = () => {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  const openLightbox = (index: number) => setSelectedImage(index);
+  const closeLightbox = () => setSelectedImage(null);
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage + 1) % products.length);
+    }
+  };
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (selectedImage !== null) {
+      setSelectedImage((selectedImage - 1 + products.length) % products.length);
+    }
+  };
+
   return (
     <section id="products" className="bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,6 +62,8 @@ const ProductShowcase = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={cardVariants}
+              onClick={() => openLightbox(index)}
+              className="cursor-pointer"
             >
               <div className="group overflow-hidden rounded-lg shadow-sm border border-border">
                 <motion.div 
@@ -68,6 +90,51 @@ const ProductShowcase = () => {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {selectedImage !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={closeLightbox}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          >
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors"
+            >
+              <X className="w-6 h-6 font-bold" />
+            </button>
+
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors"
+            >
+              <ChevronLeft className="w-8 h-8" />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors"
+            >
+              <ChevronRight className="w-8 h-8" />
+            </button>
+
+            <motion.div
+              layoutId={`product-${selectedImage}`}
+              className="relative w-11/12 h-5/6 md:w-auto md:h-5/6"
+            >
+              <Image
+                src={products[selectedImage].image}
+                alt={products[selectedImage].name}
+                layout="fill"
+                objectFit="contain"
+                className="rounded-lg"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
