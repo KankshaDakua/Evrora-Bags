@@ -1,5 +1,5 @@
 
-import { Facebook, Twitter, Instagram, Mail } from 'lucide-react';
+import { Facebook, Instagram, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -25,7 +25,6 @@ const Footer = () => {
     { icon: WhatsAppIcon, href: 'https://wa.me/919321754868' },
     { icon: Instagram, href: 'https://www.instagram.com/pvtsahxil.____?igsh=MWV2YXNxbDY3YWUzMw==' },
     { icon: Facebook, href: 'https://www.facebook.com/share/19w4sBk4FA/' },
-    { icon: Twitter, href: '#' },
     { icon: Mail, href: 'mailto:sahilkhan9321754868@gmail.com' },
   ];
 
