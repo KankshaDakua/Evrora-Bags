@@ -98,40 +98,42 @@ const ProductShowcase = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={closeLightbox}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
           >
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors"
+              className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors z-10"
             >
               <X className="w-6 h-6 font-bold" />
             </button>
 
             <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors z-10"
             >
               <ChevronLeft className="w-8 h-8" />
             </button>
             <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors"
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors z-10"
             >
               <ChevronRight className="w-8 h-8" />
             </button>
 
             <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 250 }}
               onClick={(e) => e.stopPropagation()} // Prevents closing modal when clicking on the image
-              className="relative w-11/12 h-5/6 md:w-auto md:h-5/6"
+              className="relative max-w-full max-h-full"
             >
               <Image
                 src={products[selectedImage].image}
                 alt={products[selectedImage].name}
-                fill
-                className="object-contain rounded-lg"
+                width={1200}
+                height={1500}
+                className="object-contain rounded-lg w-auto h-auto max-w-full max-h-[90vh]"
               />
             </motion.div>
           </motion.div>
