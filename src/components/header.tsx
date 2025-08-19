@@ -4,9 +4,14 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { Button } from './ui/button';
+import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Menu } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +20,13 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/collection", label: "Collection" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ];
 
   return (
     <motion.header
@@ -28,13 +40,33 @@ const Header = () => {
           Evrora Bags
         </Link>
         <nav className="hidden md:flex gap-x-8 text-sm font-medium">
-           <Link href="/" className="text-foreground hover:text-primary/80 transition-opacity">Home</Link>
-           <Link href="/collection" className="text-foreground hover:text-primary/80 transition-opacity">Collection</Link>
-           <Link href="/about" className="text-foreground hover:text-primary/80 transition-opacity">About</Link>
-           <Link href="/contact" className="text-foreground hover:text-primary/80 transition-opacity">Contact</Link>
+           {navLinks.map((link) => (
+             <Link key={link.href} href={link.href} className="text-foreground hover:text-primary/80 transition-opacity">{link.label}</Link>
+           ))}
         </nav>
         <div className="md:hidden">
-          {/* Mobile menu button can be added here */}
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6 text-primary" />
+                <span className="sr-only">Open menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[280px] bg-background">
+              <div className="p-6">
+                <Link href="/" className="text-2xl font-bold font-serif text-primary mb-8 block" onClick={() => setIsMobileMenuOpen(false)}>
+                  Evrora Bags
+                </Link>
+                <nav className="flex flex-col gap-y-6">
+                  {navLinks.map((link) => (
+                    <Link key={link.href} href={link.href} className="text-lg text-foreground hover:text-primary/80 transition-opacity" onClick={() => setIsMobileMenuOpen(false)}>
+                      {link.label}
+                    </Link>
+                  ))}
+                </nav>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </motion.header>
